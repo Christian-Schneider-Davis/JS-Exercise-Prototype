@@ -86,7 +86,7 @@ console.log(Christian.toString())
     this.odometer = this.odometer + distance,
       this.tank -= (distance / milesPerGallon)
         if (this.tank <= 0){
-          return `I ran out of fuel at ${this.odometer} miles!`;
+          console.log `I ran out of fuel at ${this.odometer} miles!`;
         }
   }
 }

@@ -102,17 +102,29 @@ console.log (Ford.tank)
       - Besides the methods on Person.prototype, babies have the ability to `.play()`:
           + Should return a string "Playing with x", x being the favorite toy.
   */
- function Baby() {
+
+function Baby(name,favoriteToy,age){
+  Person.call(this, name, age)
+  this.favoriteToy = favoriteToy,  
+  this.play = function(){
+  return `Playing with ${this.favoriteToy}.`  
+  } 
    
-  }
+}
+
+let Jojo = new Baby ("Jojo", "Legos", 2)
+
+console.log (Jojo);
+
+
  
   
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
+    1. If "this" is used outside of a function, it will apply to the Window.
+    2. Arrow functions alter the scope of "this".
+    3. In a function, "this" refers to the global object listed proir.
     4. 
   */
   

@@ -43,18 +43,18 @@ function Airplane(name) {
   this.name = paramName,
   this.age = paramAge,
   this.stomach = [] 
-  this.toString = function(){
-    return `${this.name},${this.age}`
+}
+  Person.prototype.poop = function(){
+    this.stomach = []
   }
-  this.eat = function(food){
+  Person.prototype.eat = function(food){
     if (this.stomach.length < 10){
       this.stomach.push(food)
     }
   }
-    this.poop = function(){
-      this.stomach = []
+    Person.prototype.toString= function(){
+      return `${this.name},${this.age}`
     }
-  }
 
 let Christian = new Person("Christian", 29);
 console.log(Christian.toString())
@@ -79,9 +79,6 @@ console.log(Christian.toString())
   this.milesPerGallon = milesPerGallon,
   this.tank = 0,
   this.odometer = 0,
-  this.fill = function(gallons){
-  this.tank += gallons
-  }
   this.drive = function(distance){
     this.odometer = this.odometer + distance,
       this.tank -= (distance / milesPerGallon)
@@ -90,6 +87,11 @@ console.log(Christian.toString())
         }
   }
 }
+
+Car.prototype.fill = function(gallons){
+  this.tank += gallons
+  }
+
 let Ford = new Car("mustang", 15)
 console.log (Ford)
 Ford.fill(2)

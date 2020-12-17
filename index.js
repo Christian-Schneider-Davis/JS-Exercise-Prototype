@@ -105,7 +105,7 @@ console.log (Ford.tank)
           + Should return a string "Playing with x", x being the favorite toy.
   */
 
-function Baby(name, favoriteToy, age){
+function Baby(name, age, favoriteToy){
   Person.call(this, name, age)
   this.favoriteToy = favoriteToy 
 }
@@ -126,7 +126,7 @@ console.log (Jojo);
     1. If "this" is used outside of a function, it will apply to the Window.
     2. Arrow functions alter the scope of "this".
     3. In a function, "this" refers to the global object listed proir.
-    4. 
+    4. "This" refers to the owner object in a method.
   */
   
   

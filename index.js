@@ -41,8 +41,11 @@ function Airplane(name) {
   
  function Person(paramName, paramAge) {
   this.name = paramName,
-  this.age = paramAge
+  this.age = paramAge,
   this.stomach = [] 
+  this.toString = function(){
+    return `${this.name},${this.age}`
+  }
   this.eat = function(food){
     if (this.stomach.length < 10){
       this.stomach.push(food)
@@ -53,9 +56,6 @@ function Airplane(name) {
     }
   }
 
-Person.prototype.toString = function(){
-  return `${this.name},${this.age}`
-}
 let Christian = new Person("Christian", 29);
 console.log(Christian.toString())
 
@@ -103,14 +103,13 @@ console.log (Ford.tank)
           + Should return a string "Playing with x", x being the favorite toy.
   */
 
-function Baby(name,favoriteToy,age){
+function Baby(name, favoriteToy, age){
   Person.call(this, name, age)
-  this.favoriteToy = favoriteToy,  
-  this.play = function(){
+  this.favoriteToy = favoriteToy 
+}
+Baby.prototype.play = function(){
   return `Playing with ${this.favoriteToy}.`  
   } 
-   
-}
 
 let Jojo = new Baby ("Jojo", "Legos", 2)
 

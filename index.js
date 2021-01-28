@@ -123,9 +123,13 @@ console.log (Jojo);
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
     1. If "this" is used outside of a function, it will apply to the Window.
+    When "this" is used outiside of a function, it will apply to the window. This is because "this" is a pronoun and outside of a function it will not have another object to refer back to. 
     2. Arrow functions alter the scope of "this".
+    Arrow fubctions alter the function of "this" because instead of binding they inherit the properties of the parent scope.
     3. In a function, "this" refers to the global object listed proir.
+    "This" in JavaScript is a pronoun tool used to give an object listed prior context.
     4. "This" refers to the owner object in a method.
+    Using "this" within a function refers to the owner object in that method. If used outside of a function, it will apply to the Window.
   */
   
   

@@ -116,7 +116,7 @@ Baby.prototype.play = function(){
 let Jojo = new Baby ("Jojo", "Legos", 2)
 
 console.log (Jojo);
-
+kdjdj
 
  
   
